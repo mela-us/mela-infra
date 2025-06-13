@@ -15,7 +15,7 @@ module "mongodb" {
   env    = var.env
 
   resource_group_name = azurerm_resource_group.rg_mela_uat.name
-  cosmosdb_location   = azurerm_resource_group.rg_mela_uat.location
+  cosmosdb_location   = "South India"
 
   administrator_username          = "mela"
   cosmosdb_administrator_password = var.cosmosdb_administrator_password

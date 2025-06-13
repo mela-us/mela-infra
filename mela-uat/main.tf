@@ -20,7 +20,7 @@ module "mongodb" {
   administrator_username          = "mela"
   cosmosdb_administrator_password = var.cosmosdb_administrator_password
   shard_count                     = "1"
-  compute_tier                    = "M10"
+  compute_tier                    = "Free"
   storage_size_in_gb              = "32"
 
   common_tags = var.common_tags
@@ -81,10 +81,10 @@ module "storage_account" {
 }
 
 module "openai" {
-  source = "../modules/openai"
+  source = "../modules/ai-service"
   env    = var.env
 
   resource_group_name     = azurerm_resource_group.rg_mela_uat.name
-  openai_service_location = "South India"
+  openai_service_location = "Japan East"
   common_tags             = var.common_tags
 }

@@ -29,7 +29,7 @@ See [Contribute Guide](/CONTRIBUTING.md)
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_mongodb"></a> [mongodb](#module\_mongodb) | ../modules/cosmosdb | n/a |
-| <a name="module_openai"></a> [openai](#module\_openai) | ../modules/openai | n/a |
+| <a name="module_openai"></a> [openai](#module\_openai) | ../modules/ai-service | n/a |
 | <a name="module_redis"></a> [redis](#module\_redis) | ../modules/redis | n/a |
 | <a name="module_storage_account"></a> [storage\_account](#module\_storage\_account) | ../modules/storage-account | n/a |
 | <a name="module_webapp"></a> [webapp](#module\_webapp) | ../modules/webapp | n/a |

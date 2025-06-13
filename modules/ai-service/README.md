@@ -22,7 +22,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [azurerm_cognitive_account.openai_mela](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/cognitive_account) | resource |
+| [azurerm_ai_services.openai_mela](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/ai_services) | resource |
 
 ## Inputs
 

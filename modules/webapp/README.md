@@ -29,12 +29,27 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_azure_openai_api_key"></a> [azure\_openai\_api\_key](#input\_azure\_openai\_api\_key) | The API key for Azure OpenAI. | `string` | n/a | yes |
+| <a name="input_azure_storage_account_key"></a> [azure\_storage\_account\_key](#input\_azure\_storage\_account\_key) | The access key for the Azure Storage Account. | `string` | n/a | yes |
+| <a name="input_azure_storage_account_name"></a> [azure\_storage\_account\_name](#input\_azure\_storage\_account\_name) | The name of the Azure Storage Account. | `string` | n/a | yes |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Common tags to be applied to all resources created by this module. | `map(string)` | n/a | yes |
+| <a name="input_docker_registry_password"></a> [docker\_registry\_password](#input\_docker\_registry\_password) | The password for the Docker registry. | `string` | n/a | yes |
+| <a name="input_docker_registry_username"></a> [docker\_registry\_username](#input\_docker\_registry\_username) | The username for the Docker registry. | `string` | n/a | yes |
 | <a name="input_env"></a> [env](#input\_env) | The environment for which the App Service is being created (e.g., dev, uat, prod). | `string` | n/a | yes |
-| <a name="input_os_type"></a> [os\_type](#input\_os\_type) | The operating system type for the App Service (e.g., Linux, Windows). | `string` | n/a | yes |
+| <a name="input_jwt_forget_password_secret_key"></a> [jwt\_forget\_password\_secret\_key](#input\_jwt\_forget\_password\_secret\_key) | The secret key for JWT forget password functionality. | `string` | n/a | yes |
+| <a name="input_jwt_secret_key"></a> [jwt\_secret\_key](#input\_jwt\_secret\_key) | The secret key for JWT authentication. | `string` | n/a | yes |
+| <a name="input_mail_password"></a> [mail\_password](#input\_mail\_password) | The password for the mail service. | `string` | n/a | yes |
+| <a name="input_mail_username"></a> [mail\_username](#input\_mail\_username) | The username for the mail service. | `string` | n/a | yes |
+| <a name="input_mongodb_db_connection_string"></a> [mongodb\_db\_connection\_string](#input\_mongodb\_db\_connection\_string) | The connection string for the MongoDB database. | `string` | n/a | yes |
+| <a name="input_os_type"></a> [os\_type](#input\_os\_type) | The operating system type for the App Service (e.g., 'Linux', 'Windows'). | `string` | n/a | yes |
+| <a name="input_redis_host"></a> [redis\_host](#input\_redis\_host) | The host for the Redis instance. | `string` | n/a | yes |
+| <a name="input_redis_password"></a> [redis\_password](#input\_redis\_password) | The password for the Redis instance. | `string` | n/a | yes |
+| <a name="input_redis_port"></a> [redis\_port](#input\_redis\_port) | The port for the Redis instance. | `number` | n/a | yes |
+| <a name="input_redis_username"></a> [redis\_username](#input\_redis\_username) | The username for the Redis instance. | `string` | n/a | yes |
 | <a name="input_resource_group_location"></a> [resource\_group\_location](#input\_resource\_group\_location) | The location of the resource group. | `string` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which the App Service will be created. | `string` | n/a | yes |
-| <a name="input_sku_name"></a> [sku\_name](#input\_sku\_name) | The SKU name for the App Service Plan (e.g., B1, S1, P1v2). | `string` | n/a | yes |
+| <a name="input_sku_name"></a> [sku\_name](#input\_sku\_name) | The SKU name for the App Service Plan (e.g., 'B1', 'S1'). | `string` | n/a | yes |
+| <a name="input_storage_provider"></a> [storage\_provider](#input\_storage\_provider) | The storage provider to be used (e.g., 'azure', 'aws'). | `string` | n/a | yes |
 
 ## Outputs
 

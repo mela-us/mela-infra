@@ -34,7 +34,7 @@ No modules.
 | <a name="input_cosmosdb_administrator_password"></a> [cosmosdb\_administrator\_password](#input\_cosmosdb\_administrator\_password) | The administrator password for the Cosmos DB. | `string` | n/a | yes |
 | <a name="input_cosmosdb_location"></a> [cosmosdb\_location](#input\_cosmosdb\_location) | The Azure region where the Cosmos DB account will be deployed. | `string` | n/a | yes |
 | <a name="input_env"></a> [env](#input\_env) | The environment for which the App Service is being created (e.g., dev, uat, prod). | `string` | n/a | yes |
-| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which the App Service will be created. | `string` | n/a | yes |
+| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group. | `string` | n/a | yes |
 | <a name="input_shard_count"></a> [shard\_count](#input\_shard\_count) | The number of shards for the Cosmos DB account. | `string` | n/a | yes |
 | <a name="input_storage_size_in_gb"></a> [storage\_size\_in\_gb](#input\_storage\_size\_in\_gb) | The storage size in GB for the Cosmos DB account. | `string` | n/a | yes |
 

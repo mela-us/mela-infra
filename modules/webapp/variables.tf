@@ -23,6 +23,11 @@ variable "sku_name" {
   type        = string
 }
 
+variable "docker_image_name" {
+  description = "The name of the Docker image to be used for the App Service."
+  type        = string
+}
+
 variable "docker_registry_username" {
   description = "The username for the Docker registry."
   type        = string
@@ -80,23 +85,8 @@ variable "mongodb_db_connection_string" {
   sensitive   = true
 }
 
-variable "redis_host" {
-  description = "The host for the Redis instance."
-  type        = string
-}
-
-variable "redis_port" {
-  description = "The port for the Redis instance."
-  type        = number
-}
-
-variable "redis_username" {
-  description = "The username for the Redis instance."
-  type        = string
-}
-
-variable "redis_password" {
-  description = "The password for the Redis instance."
+variable "redis_connection_string" {
+  description = "The connection string for the Redis instance."
   type        = string
   sensitive   = true
 }

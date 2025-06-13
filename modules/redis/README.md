@@ -1,4 +1,4 @@
-# redis
+# Redis
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -38,5 +38,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_primary_connection_string"></a> [primary\_connection\_string](#output\_primary\_connection\_string) | The connection string for the Redis instance. |
 <!-- END_TF_DOCS -->

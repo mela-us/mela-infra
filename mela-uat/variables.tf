@@ -4,6 +4,11 @@ variable "env" {
 }
 
 # webapp variables
+variable "docker_image_name" {
+  description = "The name of the Docker image to be used for the App Service."
+  type        = string
+}
+
 variable "docker_registry_username" {
   description = "The username for the Docker registry."
   type        = string
@@ -11,12 +16,6 @@ variable "docker_registry_username" {
 
 variable "docker_registry_password" {
   description = "The password for the Docker registry."
-  type        = string
-  sensitive   = true
-}
-
-variable "azure_openai_api_key" {
-  description = "The API key for Azure OpenAI."
   type        = string
   sensitive   = true
 }
@@ -44,30 +43,9 @@ variable "mail_password" {
   sensitive   = true
 }
 
-variable "redis_host" {
-  description = "The host for the Redis instance."
-  type        = string
-}
-
-variable "redis_port" {
-  description = "The port for the Redis instance."
-  type        = number
-}
-
-variable "redis_username" {
-  description = "The username for the Redis instance."
-  type        = string
-}
-
-variable "redis_password" {
-  description = "The password for the Redis instance."
-  type        = string
-  sensitive   = true
-}
-
-# cosmosdb variables
+# CosmosDB variables
 variable "cosmosdb_administrator_password" {
-  description = "The administrator password for the Cosmos DB account."
+  description = "The administrator password for CosmosDB."
   type        = string
   sensitive   = true
 }

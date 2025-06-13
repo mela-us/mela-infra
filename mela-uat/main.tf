@@ -36,20 +36,19 @@ module "webapp" {
   os_type                 = "Linux"
   sku_name                = "B1"
 
+
+  docker_image_name              = var.docker_image_name
   docker_registry_username       = var.docker_registry_username
   docker_registry_password       = var.docker_registry_password
-  azure_openai_api_key           = var.azure_openai_api_key
+  azure_openai_api_key           = module.openai.primary_access_key
   azure_storage_account_name     = module.storage_account.storage_account_name
   azure_storage_account_key      = module.storage_account.storage_account_primary_access_key
   jwt_forget_password_secret_key = var.jwt_forget_password_secret_key
   jwt_secret_key                 = var.jwt_secret_key
   mail_username                  = var.mail_username
   mail_password                  = var.mail_password
-  mongodb_db_connection_string   = module.mongodb.cosmosdb_connection_string
-  redis_host                     = var.redis_host
-  redis_port                     = var.redis_port
-  redis_username                 = var.redis_username
-  redis_password                 = var.redis_password
+  mongodb_db_connection_string   = module.mongodb.connection_string
+  redis_connection_string        = module.redis.primary_connection_string
   storage_provider               = "azure"
 
   common_tags = var.common_tags
@@ -79,4 +78,13 @@ module "storage_account" {
   account_replication_type = "LRS"
 
   common_tags = var.common_tags
+}
+
+module "openai" {
+  source = "../modules/openai"
+  env    = var.env
+
+  resource_group_name     = azurerm_resource_group.rg_mela_uat.name
+  openai_service_location = "South India"
+  common_tags             = var.common_tags
 }

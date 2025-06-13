@@ -29,6 +29,7 @@ See [Contribute Guide](/CONTRIBUTING.md)
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_mongodb"></a> [mongodb](#module\_mongodb) | ../modules/cosmosdb | n/a |
+| <a name="module_openai"></a> [openai](#module\_openai) | ../modules/openai | n/a |
 | <a name="module_redis"></a> [redis](#module\_redis) | ../modules/redis | n/a |
 | <a name="module_storage_account"></a> [storage\_account](#module\_storage\_account) | ../modules/storage-account | n/a |
 | <a name="module_webapp"></a> [webapp](#module\_webapp) | ../modules/webapp | n/a |
@@ -43,9 +44,9 @@ See [Contribute Guide](/CONTRIBUTING.md)
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_azure_openai_api_key"></a> [azure\_openai\_api\_key](#input\_azure\_openai\_api\_key) | The API key for Azure OpenAI. | `string` | n/a | yes |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Common tags for all resources | `map(string)` | <pre>{<br/>  "app_name": "mela",<br/>  "app_owner": "mela-team",<br/>  "created_by": "tient"<br/>}</pre> | no |
-| <a name="input_cosmosdb_administrator_password"></a> [cosmosdb\_administrator\_password](#input\_cosmosdb\_administrator\_password) | The administrator password for the Cosmos DB account. | `string` | n/a | yes |
+| <a name="input_cosmosdb_administrator_password"></a> [cosmosdb\_administrator\_password](#input\_cosmosdb\_administrator\_password) | The administrator password for CosmosDB. | `string` | n/a | yes |
+| <a name="input_docker_image_name"></a> [docker\_image\_name](#input\_docker\_image\_name) | The name of the Docker image to be used for the App Service. | `string` | n/a | yes |
 | <a name="input_docker_registry_password"></a> [docker\_registry\_password](#input\_docker\_registry\_password) | The password for the Docker registry. | `string` | n/a | yes |
 | <a name="input_docker_registry_username"></a> [docker\_registry\_username](#input\_docker\_registry\_username) | The username for the Docker registry. | `string` | n/a | yes |
 | <a name="input_env"></a> [env](#input\_env) | The environment for the deployment, e.g., dev, uat, prod | `string` | n/a | yes |
@@ -53,10 +54,6 @@ See [Contribute Guide](/CONTRIBUTING.md)
 | <a name="input_jwt_secret_key"></a> [jwt\_secret\_key](#input\_jwt\_secret\_key) | The secret key for JWT authentication. | `string` | n/a | yes |
 | <a name="input_mail_password"></a> [mail\_password](#input\_mail\_password) | The password for the mail service. | `string` | n/a | yes |
 | <a name="input_mail_username"></a> [mail\_username](#input\_mail\_username) | The username for the mail service. | `string` | n/a | yes |
-| <a name="input_redis_host"></a> [redis\_host](#input\_redis\_host) | The host for the Redis instance. | `string` | n/a | yes |
-| <a name="input_redis_password"></a> [redis\_password](#input\_redis\_password) | The password for the Redis instance. | `string` | n/a | yes |
-| <a name="input_redis_port"></a> [redis\_port](#input\_redis\_port) | The port for the Redis instance. | `number` | n/a | yes |
-| <a name="input_redis_username"></a> [redis\_username](#input\_redis\_username) | The username for the Redis instance. | `string` | n/a | yes |
 
 ## Outputs
 

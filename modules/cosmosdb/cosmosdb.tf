@@ -9,6 +9,8 @@ resource "azurerm_mongo_cluster" "cosmos_mongodb_mela" {
   shard_count            = var.shard_count
   compute_tier           = var.compute_tier
   storage_size_in_gb     = var.storage_size_in_gb
+  high_availability_mode = "Disabled"
+  version                = "7.0"
 
   tags = merge(
     var.common_tags,

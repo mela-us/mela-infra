@@ -15,7 +15,7 @@ module "mongodb" {
   env    = var.env
 
   resource_group_name = azurerm_resource_group.rg_mela_uat.name
-  cosmosdb_location   = "South India"
+  cosmosdb_location   = "Southeast Asia"
 
   administrator_username          = "mela"
   cosmosdb_administrator_password = var.cosmosdb_administrator_password
@@ -36,10 +36,10 @@ module "webapp" {
   os_type                 = "Linux"
   sku_name                = "B1"
 
-
   docker_image_name              = var.docker_image_name
   docker_registry_username       = var.docker_registry_username
   docker_registry_password       = var.docker_registry_password
+  azure_openai_endpoint          = module.openai.endpoint
   azure_openai_api_key           = module.openai.primary_access_key
   azure_storage_account_name     = module.storage_account.storage_account_name
   azure_storage_account_key      = module.storage_account.storage_account_primary_access_key

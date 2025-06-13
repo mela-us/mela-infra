@@ -24,6 +24,7 @@ resource "azurerm_linux_web_app" "app_mela" {
   }
 
   app_settings = {
+    "AZURE_OPEN_API_BASE_URL"             = var.azure_openai_endpoint
     "AZURE_OPENAI_API_KEY"                = var.azure_openai_api_key
     "AZURE_STORAGE_ACCOUNT_NAME"          = var.azure_storage_account_name
     "AZURE_STORAGE_ACCOUNT_KEY"           = var.azure_storage_account_key

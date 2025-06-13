@@ -39,6 +39,11 @@ variable "docker_registry_password" {
   sensitive   = true
 }
 
+variable "azure_openai_endpoint" {
+  description = "The endpoint for Azure OpenAI."
+  type        = string
+}
+
 variable "azure_openai_api_key" {
   description = "The API key for Azure OpenAI."
   type        = string

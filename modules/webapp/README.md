@@ -30,6 +30,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_azure_openai_api_key"></a> [azure\_openai\_api\_key](#input\_azure\_openai\_api\_key) | The API key for Azure OpenAI. | `string` | n/a | yes |
+| <a name="input_azure_openai_endpoint"></a> [azure\_openai\_endpoint](#input\_azure\_openai\_endpoint) | The endpoint for Azure OpenAI. | `string` | n/a | yes |
 | <a name="input_azure_storage_account_key"></a> [azure\_storage\_account\_key](#input\_azure\_storage\_account\_key) | The access key for the Azure Storage Account. | `string` | n/a | yes |
 | <a name="input_azure_storage_account_name"></a> [azure\_storage\_account\_name](#input\_azure\_storage\_account\_name) | The name of the Azure Storage Account. | `string` | n/a | yes |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Common tags to be applied to all resources created by this module. | `map(string)` | n/a | yes |

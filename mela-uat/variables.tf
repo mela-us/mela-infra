@@ -3,6 +3,12 @@ variable "env" {
   description = "The environment for the deployment, e.g., dev, uat, prod"
 }
 
+variable "cosmosdb_administrator_password" {
+  description = "The administrator password for the Cosmos DB account."
+  type        = string
+  sensitive   = true
+}
+
 variable "common_tags" {
   type = map(string)
   default = {
@@ -13,8 +19,3 @@ variable "common_tags" {
   description = "Common tags for all resources"
 }
 
-variable "cosmosdb_administrator_password" {
-  description = "The administrator password for the Cosmos DB account."
-  type        = string
-  sensitive   = true
-}

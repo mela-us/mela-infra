@@ -42,7 +42,7 @@ See [Contribute Guide](/CONTRIBUTING.md)
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Common tags for all resources | `map(string)` | <pre>{<br/>  "app_name": "mela",<br/>  "app_owner": "mela-team",<br/>  "created_by": "tient"<br/>}</pre> | no |
-| <a name="input_cosmos_administrator_password"></a> [cosmos\_administrator\_password](#input\_cosmos\_administrator\_password) | The administrator password for the Cosmos DB account. | `string` | n/a | yes |
+| <a name="input_cosmosdb_administrator_password"></a> [cosmosdb\_administrator\_password](#input\_cosmosdb\_administrator\_password) | The administrator password for the Cosmos DB account. | `string` | n/a | yes |
 | <a name="input_env"></a> [env](#input\_env) | The environment for the deployment, e.g., dev, uat, prod | `string` | n/a | yes |
 
 ## Outputs

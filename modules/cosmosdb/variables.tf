@@ -13,17 +13,13 @@ variable "cosmosdb_location" {
   type        = string
 }
 
-variable "cosmosdb_name" {
-  description = "The name of the Cosmos DB."
-  type        = string
-}
 
 variable "administrator_username" {
   description = "The administrator username for the Cosmos DB."
   type        = string
 }
 
-variable "cosmos_administrator_password" {
+variable "cosmosdb_administrator_password" {
   description = "The administrator password for the Cosmos DB."
   type        = string
   sensitive   = true

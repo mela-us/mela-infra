@@ -13,7 +13,7 @@ variable "common_tags" {
   description = "Common tags for all resources"
 }
 
-variable "cosmos_administrator_password" {
+variable "cosmosdb_administrator_password" {
   description = "The administrator password for the Cosmos DB account."
   type        = string
   sensitive   = true

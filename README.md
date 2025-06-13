@@ -2,10 +2,6 @@
 
 This is Mela Infra repo
 
-## Owner
-
-[@msn/infra-team](CODEOWNERS)
-
 ## Construct
 
 You should have the following tools installed on your development machine:

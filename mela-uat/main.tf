@@ -85,6 +85,6 @@ module "openai" {
   env    = var.env
 
   resource_group_name     = azurerm_resource_group.rg_mela_uat.name
-  openai_service_location = "South India"
+  openai_service_location = "Japan East"
   common_tags             = var.common_tags
 }

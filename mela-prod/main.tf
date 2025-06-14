@@ -102,7 +102,7 @@ module "static_webapp_landing_page" {
 
   resource_group_name          = azurerm_resource_group.rg_mela_prod.name
   static_web_app_location      = "East Asia"
-  static_web_app_name          = "static-app-melalandingpage-${var.env}"
+  static_web_app_name          = "static-app-mela-landing-page-${var.env}"
   static_web_app_custom_domain = "mela.guru"
   repository_url               = "https://github.com/mela-us/mela-landing-page"
   repository_branch            = "main"
@@ -117,7 +117,7 @@ module "static_webapp_admin_page" {
 
   resource_group_name          = azurerm_resource_group.rg_mela_prod.name
   static_web_app_location      = "East Asia"
-  static_web_app_name          = "static-app-melaadminpage-${var.env}"
+  static_web_app_name          = "static-app-mela-admin-page-${var.env}"
   static_web_app_custom_domain = "admin.mela.guru"
   repository_url               = "https://github.com/mela-us/mela-admin-app"
   repository_branch            = "main"

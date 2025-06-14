@@ -1,5 +1,5 @@
 resource "azurerm_service_plan" "asp_mela" {
-  name                = "asp-mela-${var.env}"
+  name                = var.app_service_name
   resource_group_name = var.resource_group_name
   location            = var.resource_group_location
   os_type             = var.os_type
@@ -7,7 +7,7 @@ resource "azurerm_service_plan" "asp_mela" {
 }
 
 resource "azurerm_linux_web_app" "app_mela" {
-  name                = "app-mela-${var.env}"
+  name                = var.web_app_name
   resource_group_name = var.resource_group_name
   location            = var.resource_group_location
   service_plan_id     = azurerm_service_plan.asp_mela.id

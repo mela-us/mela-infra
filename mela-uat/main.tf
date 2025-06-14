@@ -30,6 +30,9 @@ module "app_mela_api" {
   source = "../modules/webapp"
   env    = var.env
 
+  app_service_name = "asp-mela-api-${var.env}"
+  web_app_name     = "app-mela-api-${var.env}"
+
   resource_group_name     = azurerm_resource_group.rg_mela_uat.name
   resource_group_location = azurerm_resource_group.rg_mela_uat.location
   os_type                 = "Linux"

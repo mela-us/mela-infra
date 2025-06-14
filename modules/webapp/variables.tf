@@ -13,6 +13,16 @@ variable "resource_group_location" {
   type        = string
 }
 
+variable "app_service_name" {
+  description = "The name of the App Service."
+  type        = string
+}
+
+variable "web_app_name" {
+  description = "The name of the Web App."
+  type        = string
+}
+
 variable "os_type" {
   description = "The operating system type for the App Service (e.g., 'Linux', 'Windows')."
   type        = string

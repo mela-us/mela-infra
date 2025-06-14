@@ -34,7 +34,7 @@ resource "azurerm_linux_web_app" "app_mela" {
     "MAIL_PASSWORD"                       = var.mail_password
     "MONGODB_DB_CONNECTION_STRING"        = var.mongodb_db_connection_string
     "REDIS_HOST"                          = var.redis_hostname
-    "REDIS_CONNECTION_STRING"             = var.redis_connection_string
+    "REDIS_PRIMARY_KEY"                   = var.redis_primary_key
     "REDIS_PORT"                          = var.redis_port
     "STORAGE_PROVIDER"                    = var.storage_provider
     "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"

@@ -49,7 +49,7 @@ module "webapp" {
   mail_password                  = var.mail_password
   mongodb_db_connection_string   = module.mongodb.connection_string
   redis_hostname                 = module.redis.hostname
-  redis_connection_string        = module.redis.primary_connection_string
+  redis_primary_key              = module.redis.primary_access_key
   redis_port                     = module.redis.port
   storage_provider               = "azure"
 

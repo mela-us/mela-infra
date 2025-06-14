@@ -100,8 +100,8 @@ variable "redis_port" {
   type        = number
 }
 
-variable "redis_connection_string" {
-  description = "The connection string for the Redis instance."
+variable "redis_primary_key" {
+  description = "The primary key for the Redis instance."
   type        = string
   sensitive   = true
 }

@@ -5,11 +5,11 @@ output "hostname" {
 
 output "port" {
   description = "The port on which the Redis server is running."
-  value       = azurerm_redis_cache.redis_mela.port
+  value       = azurerm_redis_cache.redis_mela.ssl_port
 }
 
-output "primary_connection_string" {
-  description = "The primary connection string for the Redis instance."
-  value       = azurerm_redis_cache.redis_mela.primary_connection_string
+output "primary_access_key" {
+  description = "The primary access key for the Redis instance."
+  value       = azurerm_redis_cache.redis_mela.primary_access_key
   sensitive   = true
 }

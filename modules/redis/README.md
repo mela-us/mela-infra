@@ -42,5 +42,5 @@ No modules.
 |------|-------------|
 | <a name="output_hostname"></a> [hostname](#output\_hostname) | The hostname of the Redis server. |
 | <a name="output_port"></a> [port](#output\_port) | The port on which the Redis server is running. |
-| <a name="output_primary_connection_string"></a> [primary\_connection\_string](#output\_primary\_connection\_string) | The primary connection string for the Redis instance. |
+| <a name="output_primary_access_key"></a> [primary\_access\_key](#output\_primary\_access\_key) | The primary access key for the Redis instance. |
 <!-- END_TF_DOCS -->

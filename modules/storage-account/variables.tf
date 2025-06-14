@@ -23,6 +23,12 @@ variable "account_replication_type" {
   type        = string
 }
 
+variable "storage_account_containers" {
+  type    = list(string)
+  description = "List of storage containers to be created in the storage account."
+  default = []
+}
+
 variable "common_tags" {
   description = "Common tags to be applied to all resources."
   type        = map(string)

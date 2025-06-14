@@ -72,10 +72,11 @@ module "storage_account" {
   source = "../modules/storage-account"
   env    = var.env
 
-  resource_group_name      = azurerm_resource_group.rg_mela_uat.name
-  resource_group_location  = azurerm_resource_group.rg_mela_uat.location
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
+  resource_group_name        = azurerm_resource_group.rg_mela_uat.name
+  resource_group_location    = azurerm_resource_group.rg_mela_uat.location
+  account_tier               = "Standard"
+  account_replication_type   = "LRS"
+  storage_account_containers = var.storage_account_containers
 
   common_tags = var.common_tags
 }

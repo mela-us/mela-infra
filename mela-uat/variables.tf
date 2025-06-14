@@ -50,6 +50,12 @@ variable "cosmosdb_administrator_password" {
   sensitive   = true
 }
 
+variable "storage_account_containers" {
+  type    = list(string)
+  description = "List of storage containers to be created in the storage account."
+  default = []
+}
+
 variable "common_tags" {
   type = map(string)
   default = {

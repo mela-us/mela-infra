@@ -12,3 +12,11 @@ resource "azurerm_storage_account" "st_mela" {
     }
   )
 }
+
+
+resource "azurerm_storage_container" "containers" {
+  for_each              = toset(var.storage_account_containers)
+  name                  = each.value
+  storage_account_id    = azurerm_storage_account.st_mela.id
+  container_access_type = "blob"
+}

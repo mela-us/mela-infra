@@ -1,8 +1,7 @@
 resource "azurerm_static_web_app" "static_app_mela" {
   name                = var.static_web_app_name
   resource_group_name = var.resource_group_name
-  location            = var.resource_group_location
-
+  location            = var.static_web_app_location
 
   repository_url    = var.repository_url
   repository_token  = var.repository_token

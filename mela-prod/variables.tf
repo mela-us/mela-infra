@@ -4,8 +4,13 @@ variable "env" {
 }
 
 # webapp variables
-variable "docker_image_name" {
+variable "mela_api_docker_image_name" {
   description = "The name of the Docker image to be used for the App Service."
+  type        = string
+}
+
+variable "mela_admin_page_docker_image_name" {
+  description = "The name of the Docker image to be used for the Admin Page App Service."
   type        = string
 }
 

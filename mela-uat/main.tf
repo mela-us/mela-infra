@@ -26,8 +26,7 @@ module "mongodb" {
   common_tags = var.common_tags
 }
 
-
-module "webapp" {
+module "app_mela_api" {
   source = "../modules/webapp"
   env    = var.env
 
@@ -36,26 +35,32 @@ module "webapp" {
   os_type                 = "Linux"
   sku_name                = "B1"
 
-  docker_image_name              = var.docker_image_name
-  docker_registry_username       = var.docker_registry_username
-  docker_registry_password       = var.docker_registry_password
-  azure_openai_endpoint          = module.openai.endpoint
-  azure_openai_api_key           = module.openai.primary_access_key
-  azure_storage_account_name     = module.storage_account.storage_account_name
-  azure_storage_account_key      = module.storage_account.storage_account_primary_access_key
-  jwt_forget_password_secret_key = var.jwt_forget_password_secret_key
-  jwt_secret_key                 = var.jwt_secret_key
-  mail_username                  = var.mail_username
-  mail_password                  = var.mail_password
-  mongodb_db_connection_string   = module.mongodb.connection_string
-  redis_hostname                 = module.redis.hostname
-  redis_primary_key              = module.redis.primary_access_key
-  redis_port                     = module.redis.port
-  storage_provider               = "azure"
+  app_settings = {
+    "AZURE_OPEN_API_BASE_URL"             = module.openai.endpoint
+    "AZURE_OPENAI_API_KEY"                = module.openai.primary_access_key
+    "AZURE_STORAGE_ACCOUNT_NAME"          = module.storage_account.storage_account_name
+    "AZURE_STORAGE_ACCOUNT_KEY"           = module.storage_account.storage_account_primary_access_key
+    "JWT_FORGET_PASSWORD_SECRET_KEY"      = var.jwt_forget_password_secret_key
+    "JWT_SECRET_KEY"                      = var.jwt_secret_key
+    "MAIL_USERNAME"                       = var.mail_username
+    "MAIL_PASSWORD"                       = var.mail_password
+    "MONGODB_DB_CONNECTION_STRING"        = module.mongodb.connection_string
+    "REDIS_HOST"                          = module.redis.hostname
+    "REDIS_PRIMARY_KEY"                   = module.redis.primary_access_key
+    "REDIS_PORT"                          = module.redis.port
+    "STORAGE_PROVIDER"                    = "azure"
+    "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"
+  }
 
-  custom_hostname = "api.${var.env}.mela.guru"
+  docker_image_name        = var.mela_api_docker_image_name
+  docker_registry_username = var.docker_registry_username
+  docker_registry_password = var.docker_registry_password
+
+  custom_hostname = "api.mela.guru"
 
   common_tags = var.common_tags
+
+  depends_on = [module.openai, module.mongodb, module.redis, module.storage_account]
 }
 
 module "redis" {

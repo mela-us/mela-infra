@@ -39,81 +39,15 @@ variable "docker_registry_password" {
   sensitive   = true
 }
 
-variable "azure_openai_endpoint" {
-  description = "The endpoint for Azure OpenAI."
-  type        = string
-}
-
-variable "azure_openai_api_key" {
-  description = "The API key for Azure OpenAI."
-  type        = string
-  sensitive   = true
-}
-
-variable "azure_storage_account_name" {
-  description = "The name of the Azure Storage Account."
-  type        = string
-}
-
-variable "azure_storage_account_key" {
-  description = "The access key for the Azure Storage Account."
-  type        = string
-  sensitive   = true
-}
-
-variable "jwt_forget_password_secret_key" {
-  description = "The secret key for JWT forget password functionality."
-  type        = string
-  sensitive   = true
-}
-
-variable "jwt_secret_key" {
-  description = "The secret key for JWT authentication."
-  type        = string
-  sensitive   = true
-}
-
-variable "mail_username" {
-  description = "The username for the mail service."
-  type        = string
-}
-
-variable "mail_password" {
-  description = "The password for the mail service."
-  type        = string
-  sensitive   = true
-}
-
-variable "mongodb_db_connection_string" {
-  description = "The connection string for the MongoDB database."
-  type        = string
-  sensitive   = true
-}
-
-variable "redis_hostname" {
-  description = "The hostname for the Redis instance."
-  type        = string
-}
-
-variable "redis_port" {
-  description = "The port on which the Redis instance is running."
-  type        = number
-}
-
-variable "redis_primary_key" {
-  description = "The primary key for the Redis instance."
-  type        = string
-  sensitive   = true
-}
-
-variable "storage_provider" {
-  description = "The storage provider to be used (e.g., 'azure', 'aws')."
-  type        = string
-}
-
 variable "custom_hostname" {
   description = "The custom hostname for the App Service."
   type        = string
+}
+
+variable "app_settings" {
+  description = "A map of application settings to be applied to the App Service."
+  type        = map(string)
+  default     = {}
 }
 
 variable "common_tags" {

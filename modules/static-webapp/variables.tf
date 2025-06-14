@@ -8,8 +8,8 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "resource_group_location" {
-  description = "The location of the resource group."
+variable "static_web_app_location" {
+  description = "The location of the Static Web App."
   type        = string
 }
 

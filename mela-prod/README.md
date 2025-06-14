@@ -28,10 +28,10 @@ See [Contribute Guide](/CONTRIBUTING.md)
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_admin_webapp"></a> [admin\_webapp](#module\_admin\_webapp) | ../modules/admin-webapp | n/a |
 | <a name="module_mongodb"></a> [mongodb](#module\_mongodb) | ../modules/cosmosdb | n/a |
 | <a name="module_openai"></a> [openai](#module\_openai) | ../modules/ai-service | n/a |
 | <a name="module_redis"></a> [redis](#module\_redis) | ../modules/redis | n/a |
-| <a name="module_static_webapp_admin_page"></a> [static\_webapp\_admin\_page](#module\_static\_webapp\_admin\_page) | ../modules/static-webapp | n/a |
 | <a name="module_static_webapp_landing_page"></a> [static\_webapp\_landing\_page](#module\_static\_webapp\_landing\_page) | ../modules/static-webapp | n/a |
 | <a name="module_storage_account"></a> [storage\_account](#module\_storage\_account) | ../modules/storage-account | n/a |
 | <a name="module_webapp"></a> [webapp](#module\_webapp) | ../modules/webapp | n/a |
@@ -46,7 +46,6 @@ See [Contribute Guide](/CONTRIBUTING.md)
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_admin_page_github_token"></a> [admin\_page\_github\_token](#input\_admin\_page\_github\_token) | GitHub token for the admin page static web app. | `string` | n/a | yes |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Common tags for all resources | `map(string)` | <pre>{<br/>  "app_name": "mela",<br/>  "app_owner": "mela-team",<br/>  "created_by": "tient"<br/>}</pre> | no |
 | <a name="input_cosmosdb_administrator_password"></a> [cosmosdb\_administrator\_password](#input\_cosmosdb\_administrator\_password) | The administrator password for CosmosDB. | `string` | n/a | yes |
 | <a name="input_docker_image_name"></a> [docker\_image\_name](#input\_docker\_image\_name) | The name of the Docker image to be used for the App Service. | `string` | n/a | yes |

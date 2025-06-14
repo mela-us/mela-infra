@@ -63,12 +63,6 @@ variable "landing_page_github_token" {
   sensitive   = true
 }
 
-variable "admin_page_github_token" {
-  description = "GitHub token for the admin page static web app."
-  type        = string
-  sensitive   = true
-}
-
 variable "common_tags" {
   type = map(string)
   default = {

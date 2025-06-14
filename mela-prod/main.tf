@@ -111,17 +111,18 @@ module "static_webapp_landing_page" {
   common_tags = var.common_tags
 }
 
-module "static_webapp_admin_page" {
-  source = "../modules/static-webapp"
+module "admin_webapp" {
+  source = "../modules/admin-webapp"
   env    = var.env
 
-  resource_group_name          = azurerm_resource_group.rg_mela_prod.name
-  static_web_app_location      = "East Asia"
-  static_web_app_name          = "static-app-mela-admin-page-${var.env}"
-  static_web_app_custom_domain = "admin.mela.guru"
-  repository_url               = "https://github.com/mela-us/mela-admin-app"
-  repository_branch            = "main"
-  repository_token             = var.admin_page_github_token
+  resource_group_name     = azurerm_resource_group.rg_mela_prod.name
+  resource_group_location = azurerm_resource_group.rg_mela_prod.location
+  os_type                 = "Linux"
+  sku_name                = "B1"
+
+  admin_app_repository_url = "https://github.com/mela-us/mela-admin-app"
+  admin_app_branch         = "main"
+  custom_hostname          = "admin.mela.guru"
 
   common_tags = var.common_tags
 }

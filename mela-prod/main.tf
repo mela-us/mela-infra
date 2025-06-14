@@ -102,7 +102,7 @@ module "static_webapp_landing_page" {
   static_web_app_location      = "East Asia"
   static_web_app_name          = "static-app-melalandingpage-${var.env}"
   static_web_app_custom_domain = "mela.guru"
-  repository_url               = "https://github.com/mela-us/mela-admin-app"
+  repository_url               = "https://github.com/mela-us/mela-landing-page"
   repository_branch            = "main"
   repository_token             = var.landing_page_github_token
 

@@ -22,7 +22,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [azurerm_app_service_certificate_binding.mela_certificate_binding](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/app_service_certificate_binding) | resource |
+| [azurerm_app_service_certificate_binding.certificate_binding](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/app_service_certificate_binding) | resource |
 | [azurerm_app_service_custom_hostname_binding.custom_hostname_binding](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/app_service_custom_hostname_binding) | resource |
 | [azurerm_app_service_managed_certificate.managed_cert](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/app_service_managed_certificate) | resource |
 | [azurerm_linux_web_app.app_mela](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/linux_web_app) | resource |

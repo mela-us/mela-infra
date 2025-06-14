@@ -31,6 +31,9 @@ module "app_mela_api" {
   source = "../modules/webapp"
   env    = var.env
 
+  app_service_name = "asp-mela-api-${var.env}"
+  web_app_name     = "app-mela-api-${var.env}"
+
   resource_group_name     = azurerm_resource_group.rg_mela_prod.name
   resource_group_location = azurerm_resource_group.rg_mela_prod.location
   os_type                 = "Linux"
@@ -67,6 +70,9 @@ module "app_mela_api" {
 module "app_mela_admin_page" {
   source = "../modules/webapp"
   env    = var.env
+
+  app_service_name = "asp-mela-admin-page-${var.env}"
+  web_app_name     = "app-mela-admin-page-${var.env}"
 
   resource_group_name     = azurerm_resource_group.rg_mela_prod.name
   resource_group_location = azurerm_resource_group.rg_mela_prod.location

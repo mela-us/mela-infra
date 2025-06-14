@@ -28,13 +28,13 @@ See [Contribute Guide](/CONTRIBUTING.md)
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_admin_webapp"></a> [admin\_webapp](#module\_admin\_webapp) | ../modules/admin-webapp | n/a |
+| <a name="module_app_mela_admin_page"></a> [app\_mela\_admin\_page](#module\_app\_mela\_admin\_page) | ../modules/webapp | n/a |
+| <a name="module_app_mela_api"></a> [app\_mela\_api](#module\_app\_mela\_api) | ../modules/webapp | n/a |
 | <a name="module_mongodb"></a> [mongodb](#module\_mongodb) | ../modules/cosmosdb | n/a |
 | <a name="module_openai"></a> [openai](#module\_openai) | ../modules/ai-service | n/a |
 | <a name="module_redis"></a> [redis](#module\_redis) | ../modules/redis | n/a |
 | <a name="module_static_webapp_landing_page"></a> [static\_webapp\_landing\_page](#module\_static\_webapp\_landing\_page) | ../modules/static-webapp | n/a |
 | <a name="module_storage_account"></a> [storage\_account](#module\_storage\_account) | ../modules/storage-account | n/a |
-| <a name="module_webapp"></a> [webapp](#module\_webapp) | ../modules/webapp | n/a |
 
 ## Resources
 
@@ -48,7 +48,6 @@ See [Contribute Guide](/CONTRIBUTING.md)
 |------|-------------|------|---------|:--------:|
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Common tags for all resources | `map(string)` | <pre>{<br/>  "app_name": "mela",<br/>  "app_owner": "mela-team",<br/>  "created_by": "tient"<br/>}</pre> | no |
 | <a name="input_cosmosdb_administrator_password"></a> [cosmosdb\_administrator\_password](#input\_cosmosdb\_administrator\_password) | The administrator password for CosmosDB. | `string` | n/a | yes |
-| <a name="input_docker_image_name"></a> [docker\_image\_name](#input\_docker\_image\_name) | The name of the Docker image to be used for the App Service. | `string` | n/a | yes |
 | <a name="input_docker_registry_password"></a> [docker\_registry\_password](#input\_docker\_registry\_password) | The password for the Docker registry. | `string` | n/a | yes |
 | <a name="input_docker_registry_username"></a> [docker\_registry\_username](#input\_docker\_registry\_username) | The username for the Docker registry. | `string` | n/a | yes |
 | <a name="input_env"></a> [env](#input\_env) | The environment for the deployment, e.g., dev, uat, prod | `string` | n/a | yes |
@@ -57,6 +56,8 @@ See [Contribute Guide](/CONTRIBUTING.md)
 | <a name="input_landing_page_github_token"></a> [landing\_page\_github\_token](#input\_landing\_page\_github\_token) | GitHub token for the landing page static web app. | `string` | n/a | yes |
 | <a name="input_mail_password"></a> [mail\_password](#input\_mail\_password) | The password for the mail service. | `string` | n/a | yes |
 | <a name="input_mail_username"></a> [mail\_username](#input\_mail\_username) | The username for the mail service. | `string` | n/a | yes |
+| <a name="input_mela_admin_page_docker_image_name"></a> [mela\_admin\_page\_docker\_image\_name](#input\_mela\_admin\_page\_docker\_image\_name) | The name of the Docker image to be used for the Admin Page App Service. | `string` | n/a | yes |
+| <a name="input_mela_api_docker_image_name"></a> [mela\_api\_docker\_image\_name](#input\_mela\_api\_docker\_image\_name) | The name of the Docker image to be used for the App Service. | `string` | n/a | yes |
 | <a name="input_storage_account_containers"></a> [storage\_account\_containers](#input\_storage\_account\_containers) | List of storage containers to be created in the storage account. | `list(string)` | `[]` | no |
 
 ## Outputs

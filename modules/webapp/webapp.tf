@@ -45,3 +45,32 @@ resource "azurerm_linux_web_app" "app_mela" {
     }
   )
 }
+
+
+resource "azurerm_app_service_custom_hostname_binding" "mela_custom_hostname_binding" {
+  hostname            = "api.${var.env}.mela.guru"
+  app_service_name    = azurerm_linux_web_app.app_mela.name
+  resource_group_name = var.resource_group_name
+
+  depends_on = [
+    azurerm_linux_web_app.app_mela
+  ]
+}
+
+resource "azurerm_app_service_managed_certificate" "managed_cert" {
+  custom_hostname_binding_id = azurerm_app_service_custom_hostname_binding.mela_custom_hostname_binding.id
+
+
+  depends_on = [azurerm_app_service_custom_hostname_binding.mela_custom_hostname_binding]
+}
+
+resource "azurerm_app_service_certificate_binding" "mela_certificate_binding" {
+  hostname_binding_id = azurerm_app_service_custom_hostname_binding.mela_custom_hostname_binding.id
+  certificate_id      = azurerm_app_service_managed_certificate.managed_cert.id
+  ssl_state           = "SniEnabled"
+
+  depends_on = [
+    azurerm_app_service_managed_certificate.managed_cert,
+    azurerm_app_service_custom_hostname_binding.mela_custom_hostname_binding
+  ]
+}

@@ -23,7 +23,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [azurerm_app_service_certificate_binding.mela_certificate_binding](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/app_service_certificate_binding) | resource |
-| [azurerm_app_service_custom_hostname_binding.mela_custom_hostname_binding](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/app_service_custom_hostname_binding) | resource |
+| [azurerm_app_service_custom_hostname_binding.custom_hostname_binding](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/app_service_custom_hostname_binding) | resource |
 | [azurerm_app_service_managed_certificate.managed_cert](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/app_service_managed_certificate) | resource |
 | [azurerm_linux_web_app.app_mela](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/linux_web_app) | resource |
 | [azurerm_service_plan.asp_mela](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/service_plan) | resource |
@@ -37,6 +37,7 @@ No modules.
 | <a name="input_azure_storage_account_key"></a> [azure\_storage\_account\_key](#input\_azure\_storage\_account\_key) | The access key for the Azure Storage Account. | `string` | n/a | yes |
 | <a name="input_azure_storage_account_name"></a> [azure\_storage\_account\_name](#input\_azure\_storage\_account\_name) | The name of the Azure Storage Account. | `string` | n/a | yes |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Common tags to be applied to all resources created by this module. | `map(string)` | n/a | yes |
+| <a name="input_custom_hostname"></a> [custom\_hostname](#input\_custom\_hostname) | The custom hostname for the App Service. | `string` | n/a | yes |
 | <a name="input_docker_image_name"></a> [docker\_image\_name](#input\_docker\_image\_name) | The name of the Docker image to be used for the App Service. | `string` | n/a | yes |
 | <a name="input_docker_registry_password"></a> [docker\_registry\_password](#input\_docker\_registry\_password) | The password for the Docker registry. | `string` | n/a | yes |
 | <a name="input_docker_registry_username"></a> [docker\_registry\_username](#input\_docker\_registry\_username) | The username for the Docker registry. | `string` | n/a | yes |

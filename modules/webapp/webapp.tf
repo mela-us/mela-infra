@@ -55,8 +55,8 @@ resource "azurerm_linux_web_app" "app_mela" {
 }
 
 
-resource "azurerm_app_service_custom_hostname_binding" "mela_custom_hostname_binding" {
-  hostname            = "api.${var.env}.mela.guru"
+resource "azurerm_app_service_custom_hostname_binding" "custom_hostname_binding" {
+  hostname            = var.custom_hostname
   app_service_name    = azurerm_linux_web_app.app_mela.name
   resource_group_name = var.resource_group_name
 
@@ -66,14 +66,14 @@ resource "azurerm_app_service_custom_hostname_binding" "mela_custom_hostname_bin
 }
 
 resource "azurerm_app_service_managed_certificate" "managed_cert" {
-  custom_hostname_binding_id = azurerm_app_service_custom_hostname_binding.mela_custom_hostname_binding.id
+  custom_hostname_binding_id = azurerm_app_service_custom_hostname_binding.custom_hostname_binding.id
 
 
-  depends_on = [azurerm_app_service_custom_hostname_binding.mela_custom_hostname_binding]
+  depends_on = [azurerm_app_service_custom_hostname_binding.custom_hostname_binding]
 }
 
 resource "azurerm_app_service_certificate_binding" "mela_certificate_binding" {
-  hostname_binding_id = azurerm_app_service_custom_hostname_binding.mela_custom_hostname_binding.id
+  hostname_binding_id = azurerm_app_service_custom_hostname_binding.custom_hostname_binding.id
   certificate_id      = azurerm_app_service_managed_certificate.managed_cert.id
   ssl_state           = "SniEnabled"
 

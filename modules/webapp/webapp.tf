@@ -46,6 +46,12 @@ resource "azurerm_linux_web_app" "app_mela" {
       environment = var.env
     }
   )
+
+  lifecycle {
+    ignore_changes = [
+      site_config[0].application_stack[0].docker_image_name
+    ]
+  }
 }
 
 

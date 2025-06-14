@@ -23,6 +23,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [azurerm_storage_account.st_mela](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/storage_account) | resource |
+| [azurerm_storage_container.containers](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/storage_container) | resource |
 
 ## Inputs
 
@@ -34,6 +35,7 @@ No modules.
 | <a name="input_env"></a> [env](#input\_env) | The environment for which the storage account is being created (e.g., dev, test, prod). | `string` | n/a | yes |
 | <a name="input_resource_group_location"></a> [resource\_group\_location](#input\_resource\_group\_location) | The location of the resource group. | `string` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group. | `string` | n/a | yes |
+| <a name="input_storage_account_containers"></a> [storage\_account\_containers](#input\_storage\_account\_containers) | List of storage containers to be created in the storage account. | `list(string)` | `[]` | no |
 
 ## Outputs
 

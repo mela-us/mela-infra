@@ -24,9 +24,9 @@ variable "account_replication_type" {
 }
 
 variable "storage_account_containers" {
-  type    = list(string)
+  type        = list(string)
   description = "List of storage containers to be created in the storage account."
-  default = []
+  default     = []
 }
 
 variable "common_tags" {

@@ -103,7 +103,7 @@ module "static_webapp_landing_page" {
   resource_group_name          = azurerm_resource_group.rg_mela_prod.name
   static_web_app_location      = "East Asia"
   static_web_app_name          = "static-app-mela-landing-page-${var.env}"
-  static_web_app_custom_domain = "mela.guru"
+  static_web_app_custom_domain = "wwww.mela.guru"
   repository_url               = "https://github.com/mela-us/mela-landing-page"
   repository_branch            = "main"
   repository_token             = var.landing_page_github_token

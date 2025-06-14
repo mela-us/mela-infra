@@ -30,8 +30,8 @@ module "app_mela_api" {
   source = "../modules/webapp"
   env    = var.env
 
-  resource_group_name     = azurerm_resource_group.rg_mela_prod.name
-  resource_group_location = azurerm_resource_group.rg_mela_prod.location
+  resource_group_name     = azurerm_resource_group.rg_mela_uat.name
+  resource_group_location = azurerm_resource_group.rg_mela_uat.location
   os_type                 = "Linux"
   sku_name                = "B1"
 

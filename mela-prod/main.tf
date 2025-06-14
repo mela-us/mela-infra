@@ -53,6 +53,8 @@ module "webapp" {
   redis_port                     = module.redis.port
   storage_provider               = "azure"
 
+  custom_hostname = "api.mela.guru"
+
   common_tags = var.common_tags
 
   depends_on = [module.openai, module.mongodb, module.redis, module.storage_account]

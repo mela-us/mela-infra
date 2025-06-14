@@ -53,6 +53,8 @@ module "webapp" {
   redis_port                     = module.redis.port
   storage_provider               = "azure"
 
+  custom_hostname = "api.${var.env}.mela.guru"
+
   common_tags = var.common_tags
 }
 

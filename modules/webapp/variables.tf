@@ -111,6 +111,11 @@ variable "storage_provider" {
   type        = string
 }
 
+variable "custom_hostname" {
+  description = "The custom hostname for the App Service."
+  type        = string
+}
+
 variable "common_tags" {
   description = "Common tags to be applied to all resources created by this module."
   type        = map(string)

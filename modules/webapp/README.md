@@ -48,6 +48,8 @@ No modules.
 | <a name="input_mongodb_db_connection_string"></a> [mongodb\_db\_connection\_string](#input\_mongodb\_db\_connection\_string) | The connection string for the MongoDB database. | `string` | n/a | yes |
 | <a name="input_os_type"></a> [os\_type](#input\_os\_type) | The operating system type for the App Service (e.g., 'Linux', 'Windows'). | `string` | n/a | yes |
 | <a name="input_redis_connection_string"></a> [redis\_connection\_string](#input\_redis\_connection\_string) | The connection string for the Redis instance. | `string` | n/a | yes |
+| <a name="input_redis_hostname"></a> [redis\_hostname](#input\_redis\_hostname) | The hostname for the Redis instance. | `string` | n/a | yes |
+| <a name="input_redis_port"></a> [redis\_port](#input\_redis\_port) | The port on which the Redis instance is running. | `number` | n/a | yes |
 | <a name="input_resource_group_location"></a> [resource\_group\_location](#input\_resource\_group\_location) | The location of the resource group. | `string` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which the App Service will be created. | `string` | n/a | yes |
 | <a name="input_sku_name"></a> [sku\_name](#input\_sku\_name) | The SKU name for the App Service Plan (e.g., 'B1', 'S1'). | `string` | n/a | yes |

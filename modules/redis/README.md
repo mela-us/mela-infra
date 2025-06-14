@@ -40,5 +40,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_primary_connection_string"></a> [primary\_connection\_string](#output\_primary\_connection\_string) | The connection string for the Redis instance. |
+| <a name="output_hostname"></a> [hostname](#output\_hostname) | The hostname of the Redis server. |
+| <a name="output_port"></a> [port](#output\_port) | The port on which the Redis server is running. |
+| <a name="output_primary_connection_string"></a> [primary\_connection\_string](#output\_primary\_connection\_string) | The primary connection string for the Redis instance. |
 <!-- END_TF_DOCS -->

@@ -90,6 +90,16 @@ variable "mongodb_db_connection_string" {
   sensitive   = true
 }
 
+variable "redis_hostname" {
+  description = "The hostname for the Redis instance."
+  type        = string
+}
+
+variable "redis_port" {
+  description = "The port on which the Redis instance is running."
+  type        = number
+}
+
 variable "redis_connection_string" {
   description = "The connection string for the Redis instance."
   type        = string

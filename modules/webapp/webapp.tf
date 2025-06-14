@@ -72,13 +72,13 @@ resource "azurerm_app_service_managed_certificate" "managed_cert" {
   depends_on = [azurerm_app_service_custom_hostname_binding.custom_hostname_binding]
 }
 
-resource "azurerm_app_service_certificate_binding" "mela_certificate_binding" {
+resource "azurerm_app_service_certificate_binding" "certificate_binding" {
   hostname_binding_id = azurerm_app_service_custom_hostname_binding.custom_hostname_binding.id
   certificate_id      = azurerm_app_service_managed_certificate.managed_cert.id
   ssl_state           = "SniEnabled"
 
   depends_on = [
     azurerm_app_service_managed_certificate.managed_cert,
-    azurerm_app_service_custom_hostname_binding.mela_custom_hostname_binding
+    azurerm_app_service_custom_hostname_binding.custom_hostname_binding
   ]
 }

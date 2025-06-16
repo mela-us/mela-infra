@@ -1,5 +1,6 @@
 resource "azurerm_ai_services" "openai_mela" {
   name                  = "oai-mela-${var.env}"
+  custom_subdomain_name = "oai-mela-${var.env}"
   resource_group_name   = var.resource_group_name
   location              = var.openai_service_location
   public_network_access = "Enabled"

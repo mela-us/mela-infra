@@ -1,5 +1,5 @@
 resource "azurerm_communication_service" "acs_shared_services" {
-  name                = "acs-shared-services"
+  name                = "acs-mela"
   resource_group_name = var.resource_group_name
   data_location       = "Asia Pacific"
 
@@ -12,7 +12,7 @@ resource "azurerm_communication_service" "acs_shared_services" {
 }
 
 resource "azurerm_email_communication_service" "ecs_shared_services" {
-  name                = "ecs-shared-services"
+  name                = "ecs-mela"
   resource_group_name = var.resource_group_name
   data_location       = "Asia Pacific"
 

@@ -39,6 +39,8 @@ See [Contribute Guide](/CONTRIBUTING.md)
 | Name | Type |
 |------|------|
 | [azurerm_resource_group.rg_mela_uat](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/resource_group) | resource |
+| [azurerm_communication_service.acs](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/data-sources/communication_service) | data source |
+| [azurerm_resource_group.rg_shared_services](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/data-sources/resource_group) | data source |
 
 ## Inputs
 
@@ -51,8 +53,6 @@ See [Contribute Guide](/CONTRIBUTING.md)
 | <a name="input_env"></a> [env](#input\_env) | The environment for the deployment, e.g., dev, uat, prod | `string` | n/a | yes |
 | <a name="input_jwt_forget_password_secret_key"></a> [jwt\_forget\_password\_secret\_key](#input\_jwt\_forget\_password\_secret\_key) | The secret key for JWT forget password functionality. | `string` | n/a | yes |
 | <a name="input_jwt_secret_key"></a> [jwt\_secret\_key](#input\_jwt\_secret\_key) | The secret key for JWT authentication. | `string` | n/a | yes |
-| <a name="input_mail_password"></a> [mail\_password](#input\_mail\_password) | The password for the mail service. | `string` | n/a | yes |
-| <a name="input_mail_username"></a> [mail\_username](#input\_mail\_username) | The username for the mail service. | `string` | n/a | yes |
 | <a name="input_mela_api_docker_image_name"></a> [mela\_api\_docker\_image\_name](#input\_mela\_api\_docker\_image\_name) | The name of the Docker image to be used for the App Service. | `string` | n/a | yes |
 | <a name="input_storage_account_containers"></a> [storage\_account\_containers](#input\_storage\_account\_containers) | List of storage containers to be created in the storage account. | `list(string)` | `[]` | no |
 

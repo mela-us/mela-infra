@@ -39,20 +39,20 @@ module "app_mela_api" {
   sku_name                = "B1"
 
   app_settings = {
-    "AZURE_OPEN_API_BASE_URL"             = module.openai.endpoint
-    "AZURE_OPENAI_API_KEY"                = module.openai.primary_access_key
-    "AZURE_STORAGE_ACCOUNT_NAME"          = module.storage_account.storage_account_name
-    "AZURE_STORAGE_ACCOUNT_KEY"           = module.storage_account.storage_account_primary_access_key
-    "JWT_FORGET_PASSWORD_SECRET_KEY"      = var.jwt_forget_password_secret_key
-    "JWT_SECRET_KEY"                      = var.jwt_secret_key
-    "MAIL_USERNAME"                       = var.mail_username
-    "MAIL_PASSWORD"                       = var.mail_password
-    "MONGODB_DB_CONNECTION_STRING"        = module.mongodb.connection_string
-    "REDIS_HOST"                          = module.redis.hostname
-    "REDIS_PRIMARY_KEY"                   = module.redis.primary_access_key
-    "REDIS_PORT"                          = module.redis.port
-    "STORAGE_PROVIDER"                    = "azure"
-    "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"
+    "AZURE_OPEN_API_BASE_URL"                       = module.openai.endpoint
+    "AZURE_OPENAI_API_KEY"                          = module.openai.primary_access_key
+    "AZURE_STORAGE_ACCOUNT_NAME"                    = module.storage_account.storage_account_name
+    "AZURE_STORAGE_ACCOUNT_KEY"                     = module.storage_account.storage_account_primary_access_key
+    "JWT_FORGET_PASSWORD_SECRET_KEY"                = var.jwt_forget_password_secret_key
+    "JWT_SECRET_KEY"                                = var.jwt_secret_key
+    "AZURE_SENDER_EMAIL_ADDRESS"                    = "DoNotReply@info.mela.guru"
+    "AZURE_COMMUNICATION_SERVICE_CONNECTION_STRING" = data.azurerm_communication_service.acs.primary_connection_string
+    "MONGODB_DB_CONNECTION_STRING"                  = module.mongodb.connection_string
+    "REDIS_HOST"                                    = module.redis.hostname
+    "REDIS_PRIMARY_KEY"                             = module.redis.primary_access_key
+    "REDIS_PORT"                                    = module.redis.port
+    "STORAGE_PROVIDER"                              = "azure"
+    "WEBSITES_ENABLE_APP_SERVICE_STORAGE"           = "false"
   }
 
   docker_image_name        = var.mela_api_docker_image_name

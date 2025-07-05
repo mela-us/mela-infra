@@ -40,5 +40,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_communication_service_connection_string"></a> [communication\_service\_connection\_string](#output\_communication\_service\_connection\_string) | The connection string for the email communication service |
-| <a name="output_sender_email_address"></a> [sender\_email\_address](#output\_sender\_email\_address) | The sender email address |
 <!-- END_TF_DOCS -->

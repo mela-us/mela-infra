@@ -32,17 +32,6 @@ variable "jwt_secret_key" {
   sensitive   = true
 }
 
-variable "mail_username" {
-  description = "The username for the mail service."
-  type        = string
-}
-
-variable "mail_password" {
-  description = "The password for the mail service."
-  type        = string
-  sensitive   = true
-}
-
 # CosmosDB variables
 variable "cosmosdb_administrator_password" {
   description = "The administrator password for CosmosDB."

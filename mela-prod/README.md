@@ -28,6 +28,7 @@ See [Contribute Guide](/CONTRIBUTING.md)
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_acs"></a> [acs](#module\_acs) | ../modules/acs | n/a |
 | <a name="module_app_mela_admin_page"></a> [app\_mela\_admin\_page](#module\_app\_mela\_admin\_page) | ../modules/webapp | n/a |
 | <a name="module_app_mela_api"></a> [app\_mela\_api](#module\_app\_mela\_api) | ../modules/webapp | n/a |
 | <a name="module_mongodb"></a> [mongodb](#module\_mongodb) | ../modules/cosmosdb | n/a |
@@ -41,6 +42,7 @@ See [Contribute Guide](/CONTRIBUTING.md)
 | Name | Type |
 |------|------|
 | [azurerm_resource_group.rg_mela_prod](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/resource_group) | resource |
+| [azurerm_resource_group.rg_shared_services](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/resource_group) | resource |
 
 ## Inputs
 

@@ -59,7 +59,7 @@ module "app_mela_api" {
   docker_registry_username = var.docker_registry_username
   docker_registry_password = var.docker_registry_password
 
-  custom_hostname = "api.mela.guru"
+  custom_hostname = "api.uat.mela.guru"
 
   common_tags = var.common_tags
 

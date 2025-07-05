@@ -10,6 +10,26 @@ resource "azurerm_resource_group" "rg_mela_prod" {
   )
 }
 
+resource "azurerm_resource_group" "rg_shared_services" {
+  name     = "rg-shared-services"
+  location = "Southeast Asia"
+
+  tags = merge(
+    var.common_tags,
+    {
+      environment = var.env
+    }
+  )
+}
+
+module "acs" {
+  source = "../modules/acs"
+  env    = var.env
+
+  resource_group_name = azurerm_resource_group.rg_shared_services.name
+  common_tags         = var.common_tags
+}
+
 module "mongodb" {
   source = "../modules/cosmosdb"
   env    = var.env

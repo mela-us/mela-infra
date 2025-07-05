@@ -40,6 +40,7 @@ See [Contribute Guide](/CONTRIBUTING.md)
 |------|------|
 | [azurerm_resource_group.rg_mela_uat](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/resource_group) | resource |
 | [azurerm_communication_service.acs](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/data-sources/communication_service) | data source |
+| [azurerm_resource_group.rg_shared_services](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/data-sources/resource_group) | data source |
 
 ## Inputs
 

@@ -105,6 +105,10 @@ module "app_mela_admin_page" {
 
   custom_hostname = "admin.mela.guru"
 
+  app_settings = {
+    "REACT_APP_BACKEND_URL" = "https://api.mela.guru"
+  }
+
   common_tags = var.common_tags
 }
 
@@ -157,4 +161,15 @@ module "static_webapp_landing_page" {
   repository_token             = var.landing_page_github_token
 
   common_tags = var.common_tags
+}
+
+module "monitoring" {
+  source = "../modules/monitoring"
+  env    = var.env
+
+  resource_group_name     = azurerm_resource_group.rg_shared_services.name
+  resource_group_location = azurerm_resource_group.rg_shared_services.location
+
+  common_tags = var.common_tags
+
 }

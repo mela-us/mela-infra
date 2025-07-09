@@ -32,6 +32,7 @@ See [Contribute Guide](/CONTRIBUTING.md)
 | <a name="module_app_mela_admin_page"></a> [app\_mela\_admin\_page](#module\_app\_mela\_admin\_page) | ../modules/webapp | n/a |
 | <a name="module_app_mela_api"></a> [app\_mela\_api](#module\_app\_mela\_api) | ../modules/webapp | n/a |
 | <a name="module_mongodb"></a> [mongodb](#module\_mongodb) | ../modules/cosmosdb | n/a |
+| <a name="module_monitoring"></a> [monitoring](#module\_monitoring) | ../modules/monitoring | n/a |
 | <a name="module_openai"></a> [openai](#module\_openai) | ../modules/ai-service | n/a |
 | <a name="module_redis"></a> [redis](#module\_redis) | ../modules/redis | n/a |
 | <a name="module_static_webapp_landing_page"></a> [static\_webapp\_landing\_page](#module\_static\_webapp\_landing\_page) | ../modules/static-webapp | n/a |

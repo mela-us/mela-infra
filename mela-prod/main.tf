@@ -40,8 +40,8 @@ module "mongodb" {
   administrator_username          = "mela"
   cosmosdb_administrator_password = var.cosmosdb_administrator_password
   shard_count                     = "1"
-  compute_tier                    = "M20"
-  storage_size_in_gb              = "128"
+  compute_tier                    = "M10"
+  storage_size_in_gb              = "32"
 
   common_tags = var.common_tags
 }
@@ -57,7 +57,7 @@ module "app_mela_api" {
   resource_group_name     = azurerm_resource_group.rg_mela_prod.name
   resource_group_location = azurerm_resource_group.rg_mela_prod.location
   os_type                 = "Linux"
-  sku_name                = "P0v3"
+  sku_name                = "B1"
 
   app_settings = {
     "AZURE_OPEN_API_BASE_URL"                       = module.openai.endpoint

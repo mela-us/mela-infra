@@ -41,7 +41,7 @@ module "mongodb" {
   cosmosdb_administrator_password = var.cosmosdb_administrator_password
   shard_count                     = "1"
   compute_tier                    = "M10"
-  storage_size_in_gb              = "32"
+  storage_size_in_gb              = "128"
 
   common_tags = var.common_tags
 }
